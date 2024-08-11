@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AI Solutions - Bully-Builder</title>
+
+  {% load static %}
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <!-- Custom styles for AI form -->
+  <style>
+    .ai_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .ai_form input[type="text"] {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #007bff;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ai_form input[type="text"]:focus {
+      border-color: #0056b3;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+
+    .ai_form button {
+      margin-top: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .ai_form button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .ai_form #aiResult {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 500px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background-color: #f8f9fa;
+      color: #333;
+      white-space: pre-wrap; /* Preserve formatting */
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'images/logo.png' %}" alt="" />
+            <span>Bully-Builder</span>
+          </a>
+          <div class="contact_nav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+              <li class="nav-item active"><a class="nav-link" href="/ai">AI Solutions</a></li>
+              <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="/ai">AI Solutions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- ai section -->
+  <section class="ai_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>AI-Based Solutions</h2>
+      </div>
+      <div class="ai_content">
+        <p>Welcome to our AI Solutions page! Here, we showcase our cutting-edge artificial intelligence models that are designed to enhance your fitness journey. Our AI solutions offer personalized recommendations, predictive analytics, and more to help you achieve your fitness goals efficiently.</p>
+
+        <!-- AI Input Form -->
+        <div class="ai_form">
+          <input type="text" id="aiInput" placeholder="Enter your query">
+          <button id="aiSubmit">Get Prediction</button>
+          <div id="aiResult"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end ai section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2-top">
+    <div class="container">
+      <div class="info_form">
+        <h4>Our Newsletter</h4>
+        <form action="">
+          <input type="text" placeholder="Enter your email">
+          <div class="d-flex justify-content-end">
+            <button>subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>About Big-Bully</h6>
+          <p>Big-Bully Gym offers specialized training programs focusing on strength, endurance, and overall fitness. Join us to achieve your fitness goals and transform your life.</p>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <h6>Menus</h6>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="#contactSection">Contact Us</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Useful Links</h6>
+          <ul>
+            <li><a href="#">Adipiscing</a></li>
+            <li><a href="#">Elit, sed</a></li>
+            <li><a href="#">do Eiusmod</a></li>
+            <li><a href="#">Tempor</a></li>
+            <li><a href="#">incididunt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>&copy; 2024 All Rights Reserved By <a href="https://html.design/">Bully-Builder</a></p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- AI script -->
+  <script>
+    // Function to fetch prediction from the AI model API
+    async function getPrediction(inputText) {
+      try {
+        console.log('inputText:', inputText);
+          const response = await fetch("{% url 'ai_predict' %}", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+                  "X-CSRFToken": "{{ csrf_token }}"
+              },
+              body: JSON.stringify({
+                  query: inputText
+              })
+          });
+          
+          if (!response.ok) {
+              throw new Error('Network response was not ok.');
+          }
+
+          const data = await response.json();
+          console.log('Prediction:', data["response"]);
+          return data.response;
+      } catch (error) {
+          console.error('Error fetching prediction:', error);
+          return { error: 'An error occurred while fetching the prediction.' };
+      }
+  }
+
+  // Function to handle button click and display prediction result
+  document.addEventListener('DOMContentLoaded', function() {
+      const submitButton = document.getElementById('aiSubmit');
+      const inputField = document.getElementById('aiInput');
+      const resultDiv = document.getElementById('aiResult');
+
+      if (submitButton && inputField && resultDiv) {
+          submitButton.addEventListener('click', async function() {
+              const inputText = inputField.value.trim();
+              if (inputText === '') {
+                  alert('Please enter a query.');
+                  return;
+              }
+              
+              resultDiv.innerText = 'Loading...';
+              const result = await getPrediction(inputText);
+              if (result.error) {
+                  resultDiv.innerText = result.error;
+              } else {
+                  resultDiv.innerText = result;
+              }
+          });
+      }
+  });
+  </script>
+</body>
+</html>

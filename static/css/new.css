@@ -1,0 +1,45 @@
+/* Ensure the service section is styled correctly */
+.service_section {
+    padding: 60px 0;
+    background-color: #f4f4f4; /* Optional: Adjust background color */
+  }
+  
+  .service_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .detail-box {
+    padding: 20px;
+  }
+  
+  .visible_heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .detail-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  

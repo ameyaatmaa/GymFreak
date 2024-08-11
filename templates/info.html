@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Service Details | Bully-Builder</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header section -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="/">
+          <img src="{% static 'images/logo.png' %}" alt="" />
+          <span>
+            Bully-Builder
+          </span>
+        </a>
+        <div class="contact_nav" id="">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <img src="{% static 'images/location.png' %}" alt="" />
+                <span>Location</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <img src="{% static 'images/call.png' %}" alt="" />
+                <span>Call : + 01 1234567890</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <img src="{% static 'images/envelope.png' %}" alt="" />
+                <span>Bully_Builder@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- service details section -->
+  <section class="service_details_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Our Services</h2>
+      </div>
+      <div class="service_details_container">
+        <!-- CrossFit Training -->
+        <div class="service_box">
+          <img src="{% static 'images/s-1.jpg' %}" alt="CrossFit Training">
+          <div class="service_info">
+            <h3>CROSSFIT TRAINING</h3>
+            <p>CrossFit is a high-intensity fitness program that combines elements of weightlifting, cardio, and bodyweight exercises. Our CrossFit training sessions are designed to challenge your strength, endurance, and agility, helping you achieve your fitness goals with a supportive community.</p>
+          </div>
+        </div>
+        <!-- Zumba Class -->
+        <div class="service_box">
+          <img src="{% static 'images/s-2.jpg' %}" alt="Zumba Class">
+          <div class="service_info">
+            <h3>ZUMBA CLASS</h3>
+            <p>Zumba is a dance-based workout that combines Latin and international music with dance moves. Our Zumba classes are fun, energetic, and designed to help you burn calories, improve your cardiovascular health, and boost your mood while dancing to upbeat music.</p>
+          </div>
+        </div>
+        <!-- Personal Trainer -->
+        <div class="service_box">
+          <img src="{% static 'images/s-3.jpg' %}" alt="Personal Trainer">
+          <div class="service_info">
+            <h3>PERSONAL TRAINER</h3>
+            <p>Our personal trainers are dedicated to helping you reach your fitness goals through personalized workout plans and one-on-one coaching. Whether you're looking to lose weight, build muscle, or improve your overall fitness, our trainers will work with you to create a customized plan that fits your needs and goals.</p>
+          </div>
+        </div>
+        <!-- Yoga Classes -->
+        <div class="service_box">
+          <img src="{% static 'images/s-4.jpg' %}" alt="Yoga Classes">
+          <div class="service_info">
+            <h3>YOGA CLASSES</h3>
+            <p>Our Yoga Classes offer a holistic approach to fitness, focusing on flexibility, strength, and mental well-being. Join our classes to enhance your body’s flexibility, improve your posture, and achieve a greater sense of peace and balance in your life.</p>
+          </div>
+        </div>
+        <!-- Pilates Training -->
+        <div class="service_box">
+          <img src="{% static 'images/s-5.jpg' %}" alt="Pilates Training">
+          <div class="service_info">
+            <h3>PILATES TRAINING</h3>
+            <p>Pilates training emphasizes core strength, posture, and flexibility through controlled movements. Our Pilates sessions are designed to improve your core stability, enhance muscle tone, and promote overall physical well-being in a low-impact, supportive environment.</p>
+          </div>
+        </div>
+        <!-- Nutrition Coaching -->
+        <div class="service_box">
+          <img src="{% static 'images/s-6.jpg' %}" alt="Nutrition Coaching">
+          <div class="service_info">
+            <h3>NUTRITION COACHING</h3>
+            <p>Our Nutrition Coaching service provides personalized guidance to help you achieve your dietary goals. Whether you aim to lose weight, build muscle, or improve overall health, our expert nutritionists will work with you to create a customized plan that suits your lifestyle and preferences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end service details section -->
+
+  <!-- Begin footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_logo">
+          <img src="{% static 'images/logo.png' %}" alt="Bully-Builder Logo" />
+          <span>Bully-Builder</span>
+        </div>
+        <div class="footer_links">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/service">Services</a></li>
+            <li><a href="/ai">AI Solutions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer section -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
